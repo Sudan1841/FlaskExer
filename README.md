@@ -11,22 +11,26 @@ bash
 Copy code
 mkdir flask_note_app
 cd flask_note_app
+
 Step 2: Initialize a Virtual Environment and Install Flask
 bash
 Copy code
 virtualenv .venv
 source .venv/bin/activate  # On Windows, use ".venv\Scripts\activate"
 pip install flask
+
 Step 3: Create the "src" Directory and Navigate Inside
 bash
 Copy code
 mkdir src
 cd src
+
 Step 4: Create the "app" Package
 bash
 Copy code
 mkdir app
 cd app
+
 Step 5: Create the "init.py" File
 Use a text editor to create the __init__.py file inside the app directory:
 
@@ -37,6 +41,7 @@ from flask import Flask
 app = Flask(__name__)
 
 from app import routes
+
 Step 6: Create the "routes.py" File
 Use a text editor to create the routes.py file inside the app directory:
 
@@ -57,12 +62,14 @@ def add_note():
     if note:
         notes.append(note)
     return redirect(url_for('index'))
+    
 Step 7: Create a "templates" Folder
 Inside the app directory, create a folder named templates. This is where Flask will look for HTML templates.
 
 bash
 Copy code
 mkdir templates
+
 Step 8: Create the "index.html" Template
 Use a text editor to create the index.html file inside the templates directory:
 
@@ -93,12 +100,14 @@ Copy code
     </ul>
 </body>
 </html>
+
 Step 9: Set the "FLASK_APP" Environment Variable
 Back in the src directory, set the FLASK_APP environment variable:
 
 bash
 Copy code
 export FLASK_APP=app
+
 Step 10: Run the Flask App
 bash
 Copy code
